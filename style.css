@@ -1,0 +1,143 @@
+
+
+body {
+  margin: 0;
+  font-family: Roboto;
+  background-color: #eeece7;
+  color: #111;
+}
+
+header {
+  background-color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin-left: 1rem;
+}
+
+.hero {
+  display: flex;
+  height: 250px;
+  margin: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.hero-left {
+  flex: 1;
+  background-color: #7b7b49;
+}
+
+.hero-right {
+  flex: 2;
+  padding: 2rem;
+  background-color: #403d4d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-right p:first-child {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.hero-right h1 {
+  font-size: 2rem;
+  margin: 0.2rem 0;
+}
+
+.highlights {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.highlight {
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.highlights h1 {
+  font-size: 1.8rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.highlight h2 {
+  font-size: 1.1rem;
+}
+
+.content-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.block {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.image-placeholder {
+  aspect-ratio: 4 / 3;
+  max-width: 500px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.block .text {
+  flex: 1;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.text h3 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .highlights,
+  .block {
+    flex-direction: column;
+  }
+
+  .block .image-placeholder,
+  .block .text {
+    flex: unset;
+  }
+}
