@@ -141,3 +141,74 @@ ul li {
     flex: unset;
   }
 }
+.hero-image{
+    border-radius: 0px;
+    position: center;
+}
+.dark-mode{
+  border: none;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 100px;
+}
+[data-theme="dark"] body {
+  background-color: #1e1f23;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] header {
+  background-color: #2a2c31;
+}
+
+[data-theme="dark"] nav a {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .hero-left {
+  background-color: #2d2f36;
+}
+
+[data-theme="dark"] .hero-right {
+  background-color: #24262b;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .hero-right p:first-child {
+  color: #a0a0a0;
+}
+
+[data-theme="dark"] .highlight {
+  background-color: #31343a;
+  color: #e2e2e2;
+}
+
+[data-theme="dark"] .block .text {
+  background-color: #31343a;
+  color: #e2e2e2;
+}
+
+[data-theme="dark"] .highlights h1,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #c0d0e0;
+}
+
+[data-theme="dark"] a {
+  color: #8ab4f8;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+[data-theme="dark"] #theme-toggle {
+  background-color: #2d2f36;
+  color: #c0d0e0;
+  border: 1px solid #444;
+}
+

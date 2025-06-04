@@ -23,11 +23,15 @@
         <a href="#">Link 3</a>
         <a href="#">Link 4</a>
       </nav>
+      <button class="dark-mode" id="theme-toggle" style="margin: 1rem; font-size: 1.2rem;">🌙</button>
+
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-      <div class="hero-left"></div>
+      <div class="hero-left">
+          <img class="hero-image" src="images/lu.jpg" alt="Rīgas satiksmes autobuss">
+      </div>
       <div class="hero-right">
         <p>Aleksis Volrāts av22110</p>
         <h1>Pieredze ceļā no dzīvesvietas līdz LU</h1>
@@ -75,7 +79,7 @@
     <section class="content-blocks">
       <div class="block">
         <div class="image-placeholder">
-          <img src="images/Autobuss.jpg" alt="Rīgas satiksmes autobuss">
+          <img src="images/Autobuss.png" alt="Rīgas satiksmes autobuss">
         </div>
         <div class="text">
           <h3>Rīgas Satiksme</h3>
@@ -167,5 +171,23 @@
         </div>
       </div>
     </section>
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  // Optional: apply system preference on first load
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    html.setAttribute('data-theme', 'dark');
+    toggleBtn.textContent = '🌞'; // show sun for dark mode
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    const isDark = html.getAttribute('data-theme') === 'dark';
+    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggleBtn.textContent = isDark ? '🌞' : '🌙';
+  });
+</script>
+
+
   </body>
 </html>
