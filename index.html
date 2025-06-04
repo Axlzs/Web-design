@@ -17,20 +17,26 @@
     <!-- Header -->
     <header>
       <nav>
-        <strong>TEKSTS</strong>
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-        <a href="#">Link 4</a>
+        <strong>LU</strong>
+        <a href="https://eztf.lu.lv/">LU EZTF</a>
+        <a href="https://www.rigassatiksme.lv/lv/">Rīgas Satiksme</a>
+        <a href="https://bolt.eu/en/scooters/">Bolt</a>
+        <a href="https://www.zoom.com/?lang=en-US">Zoom</a>
+        <a href="https://teams.microsoft.com/edustart">MS Teams</a>
       </nav>
-      <button class="dark-mode" id="theme-toggle" style="margin: 1rem; font-size: 1.2rem;">🌙</button>
-
+      <button id="theme-toggle" style="margin: 1rem; font-size: 1.2rem">
+        🌙
+      </button>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-left">
-          <img class="hero-image" src="images/lu.jpg" alt="Rīgas satiksmes autobuss">
+        <img
+          class="hero-image"
+          src="images/lu.jpg"
+          alt="Rīgas satiksmes autobuss"
+        />
       </div>
       <div class="hero-right">
         <p>Aleksis Volrāts av22110</p>
@@ -53,33 +59,44 @@
     </section>
     <!-- Important Highlights -->
     <section class="highlights">
-      <article class="highlight">
-        <h2>Nokļūsana līdz universitātei</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore...
-        </p>
-        <p>Teksts</p>
-      </article>
-      <article class="highlight">
-        <h2>Attālinātās mācības</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore...
-        </p>
-        <p>Teksts</p>
-      </article>
+      <a href="#celsh-uz-lu" style="text-decoration: none; color: inherit">
+        <article id="Important" class="highlight">
+          <h2>Nokļūšana līdz universitātei</h2>
+          <p>
+            Ceļš uz Latvijas Universitāti katram studentam var būt atšķirīgs —
+            sākot no sabiedriskā transporta un beidzot ar koplietošanas
+            skrejriteņiem. Šī sadaļa piedāvā ieskatu biežāk izmantotajos
+            pārvietošanās veidos, kā arī sniedz praktiskus padomus efektīvai un
+            ērtai nokļūšanai uz lekcijām.
+          </p>
+        </article>
+      </a>
+
+      <a
+        href="#attalinatas-lekcijas"
+        style="text-decoration: none; color: inherit"
+      >
+        <article id="Important" class="highlight">
+          <h2>Attālinātās mācības</h2>
+          <p>
+            Attālinātās lekcijas ir kļuvušas par būtisku studiju sastāvdaļu,
+            īpaši pēdējos gados. Šeit aplūkosim populārākās platformas, kuras
+            izmanto LU studenti, kā arī padomus kvalitatīvai un produktīvai
+            mācību pieredzei no attāluma.
+          </p>
+        </article>
+      </a>
     </section>
 
     <section class="highlights">
-      <h1>Ceļš uz LU</h1>
+      <h1 id="celsh-uz-lu">Ceļš uz LU</h1>
     </section>
 
     <!-- Content Blocks with Image and Text -->
     <section class="content-blocks">
       <div class="block">
         <div class="image-placeholder">
-          <img src="images/Autobuss.png" alt="Rīgas satiksmes autobuss">
+          <img src="images/Autobuss.png" alt="Rīgas satiksmes autobuss" />
         </div>
         <div class="text">
           <h3>Rīgas Satiksme</h3>
@@ -118,19 +135,19 @@
           </ul>
         </div>
         <div class="image-placeholder">
-          <img src="images/bolt-scooter.jpg" alt="Bolt scooter">
+          <img src="images/bolt-scooter.jpg" alt="Bolt scooter" />
         </div>
       </div>
     </section>
 
     <section class="highlights">
-      <h1>Attālinātās lekcijas</h1>
+      <h1 id="attalinatas-lekcijas">Attālinātās lekcijas</h1>
     </section>
     <!-- Content Blocks with Image and Text -->
     <section class="content-blocks">
       <div class="block">
         <div class="image-placeholder">
-          <img src="images/zoom.jpg" alt="Zoom bilde">
+          <img src="images/zoom.jpg" alt="Zoom bilde" />
         </div>
         <div class="text">
           <h3>Zoom</h3>
@@ -167,27 +184,25 @@
           </ul>
         </div>
         <div class="image-placeholder">
-          <img src="images/MS-teams.jpg" alt="Microsoft teams">
+          <img src="images/MS-teams.jpg" alt="Microsoft teams" />
         </div>
       </div>
     </section>
-<script>
-  const toggleBtn = document.getElementById('theme-toggle');
-  const html = document.documentElement;
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+      const html = document.documentElement;
 
-  // Optional: apply system preference on first load
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    html.setAttribute('data-theme', 'dark');
-    toggleBtn.textContent = '🌞'; // show sun for dark mode
-  }
+      // Optional: apply system preference on first load
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        html.setAttribute("data-theme", "dark");
+        toggleBtn.textContent = "🌞"; // show sun for dark mode
+      }
 
-  toggleBtn.addEventListener('click', () => {
-    const isDark = html.getAttribute('data-theme') === 'dark';
-    html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    toggleBtn.textContent = isDark ? '🌞' : '🌙';
-  });
-</script>
-
-
+      toggleBtn.addEventListener("click", () => {
+        const isDark = html.getAttribute("data-theme") === "dark";
+        html.setAttribute("data-theme", isDark ? "light" : "dark");
+        toggleBtn.textContent = isDark ? "🌞" : "🌙";
+      });
+    </script>
   </body>
 </html>

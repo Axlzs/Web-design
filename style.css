@@ -5,15 +5,21 @@ body {
   font-family: Roboto;
   background-color: #eeece7;
   color: #111;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
 }
 
 header {
   background-color: white;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   border-bottom: 1px solid #ccc;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 
 nav a {
@@ -25,7 +31,7 @@ nav a {
 .hero {
   display: flex;
   height: 250px;
-  margin: 2rem;
+  margin-top: 2rem;
   background-color: #333;
   color: white;
 }
@@ -58,7 +64,7 @@ nav a {
 .highlights {
   display: flex;
   gap: 2rem;
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 .highlight {
@@ -71,9 +77,16 @@ nav a {
 
 .highlights h1 {
   font-size: 1.8rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
+#Important.highlight:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
 
 .highlight h2 {
   font-size: 1.1rem;
@@ -83,7 +96,7 @@ nav a {
   display: flex;
   flex-direction: column;
   gap: 3rem;
-  margin: 2rem;
+  margin-top: 2rem;
 }
 
 .block {
@@ -145,16 +158,19 @@ ul li {
     border-radius: 0px;
     position: center;
 }
-.dark-mode{
-  border: none;
+#theme-toggle{
   color: white;
+  border-color: #525252;
   padding: 5px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   border-radius: 100px;
+  right: 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 [data-theme="dark"] body {
   background-color: #1e1f23;
