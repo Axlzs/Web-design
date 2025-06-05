@@ -73,6 +73,7 @@ nav a {
   padding: 1.5rem;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
 }
 
 .highlights h1 {
@@ -80,11 +81,14 @@ nav a {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-#Important.highlight:hover {
+.link-box {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.link-box:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
-  transition: all 0.2s ease;
-  cursor: pointer;
 }
 
 
